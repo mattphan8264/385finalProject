@@ -39,13 +39,13 @@ public class ItemController : MonoBehaviour {
 			if (type == "Item") {
 				if (PlayerStatistics.level <= 3) {
 					generateBeginnerItem ();
-				} else if (PlayerStatistics.level <= 8) {
+				} else if (PlayerStatistics.level <= 10) {
 					generateIntermediateItem ();
-				} else if (PlayerStatistics.level <= 12) {
+				} else if (PlayerStatistics.level <= 14) {
 					generateIntermediateItemv2 ();
-				} else if (PlayerStatistics.level <= 15) {
+				} else if (PlayerStatistics.level <= 17) {
 					generateAdvancedItem ();
-				} else if (PlayerStatistics.level <= 19) {
+				} else if (PlayerStatistics.level <= 20) {
 					generateAdvancedItemv2 ();
 				} else {
 					generateGodItem ();

@@ -160,11 +160,11 @@ public class PlayerSpells : MonoBehaviour {
 			FireBallController shot = fireball.GetComponent<FireBallController> ();
 
 			if (PlayerStatistics.level <= 5) {
-				shot.modifiedDamage = shot.baseDamage + (level [selectedSpell] * 5);
+				shot.modifiedDamage = shot.baseDamage + (level [selectedSpell] * 3);
 			} else if (PlayerStatistics.level <= 15) {
-				shot.modifiedDamage = shot.baseDamage + (level [selectedSpell] * 10);
+				shot.modifiedDamage = shot.baseDamage + (level [selectedSpell] * 7);
 			} else {
-				shot.modifiedDamage = shot.baseDamage + (level [selectedSpell] * 20);
+				shot.modifiedDamage = shot.baseDamage + (level [selectedSpell] * 13);
 			}
 
 			shot.setVelocity ((cursorL.x - transform.position.x) / divider, (cursorL.y - transform.position.y) / divider);
@@ -181,11 +181,11 @@ public class PlayerSpells : MonoBehaviour {
 			LightningController shot = lightning.GetComponent<LightningController> ();
 
 			if (PlayerStatistics.level <= 5) {
-				shot.modifiedDamage = shot.baseDamage + (level [selectedSpell] * 5);
+				shot.modifiedDamage = shot.baseDamage + (level [selectedSpell] * 3);
 			} else if (PlayerStatistics.level <= 15) {
-				shot.modifiedDamage = shot.baseDamage + (level [selectedSpell] * 10);
+				shot.modifiedDamage = shot.baseDamage + (level [selectedSpell] * 7);
 			} else {
-				shot.modifiedDamage = shot.baseDamage + (level [selectedSpell] * 20);
+				shot.modifiedDamage = shot.baseDamage + (level [selectedSpell] * 13);
 			}
 
 			shot.setVelocity (0, -1f);
@@ -212,11 +212,11 @@ public class PlayerSpells : MonoBehaviour {
 			BombController shot = bomb.GetComponent<BombController> ();
 
 			if (PlayerStatistics.level <= 5) {
-				shot.modifiedDamage = shot.baseDamage + (level [selectedSpell] * 5);
+				shot.modifiedDamage = shot.baseDamage + (level [selectedSpell] * 3);
 			} else if (PlayerStatistics.level <= 15) {
-				shot.modifiedDamage = shot.baseDamage + (level [selectedSpell] * 10);
+				shot.modifiedDamage = shot.baseDamage + (level [selectedSpell] * 7);
 			} else {
-				shot.modifiedDamage = shot.baseDamage + (level [selectedSpell] * 20);
+				shot.modifiedDamage = shot.baseDamage + (level [selectedSpell] * 13);
 			}
 
 			shot.setVelocity ((cursorL.x - transform.position.x) / divider, (cursorL.y - transform.position.y) / divider);
@@ -235,11 +235,11 @@ public class PlayerSpells : MonoBehaviour {
 			FlamethrowerController shot = flamethrower.GetComponent<FlamethrowerController> ();
 
 			if (PlayerStatistics.level <= 5) {
-				shot.modifiedDamage = shot.baseDamage + (level [selectedSpell] * 5);
+				shot.modifiedDamage = shot.baseDamage + (level [selectedSpell] * 3);
 			} else if (PlayerStatistics.level <= 15) {
-				shot.modifiedDamage = shot.baseDamage + (level [selectedSpell] * 10);
+				shot.modifiedDamage = shot.baseDamage + (level [selectedSpell] * 7);
 			} else {
-				shot.modifiedDamage = shot.baseDamage + (level [selectedSpell] * 20);
+				shot.modifiedDamage = shot.baseDamage + (level [selectedSpell] * 13);
 			}
 
 			shot.setVelocity ((cursorL.x - transform.position.x) / divider, (cursorL.y - transform.position.y) / divider);

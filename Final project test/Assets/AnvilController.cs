@@ -18,7 +18,7 @@ public class AnvilController : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.CompareTag ("Player")) {
-			control.text = "Press U in inventory \nto upgrade equipment";
+			control.text = "Press U in inventory \nto upgrade equipment\nPress Y in inventory \nto reroll equipment";
 		}
 	}
 

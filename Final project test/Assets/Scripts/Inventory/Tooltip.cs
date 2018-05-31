@@ -99,7 +99,8 @@ public class Tooltip : MonoBehaviour {
 					"\nAtk: " + item.atk + " (" + atkdiff + "</b></color>)" + 
 					"\nDef: " + item.def + " (" + defdiff + "</b></color>)" + 
 					"\n<color=#e9f004><b>Value: " + item.Value +
-					"\nUpgrade Cost: " + item.Rarity * item.Value + "</b></color>";
+					"\nUpgrade Cost: " + item.Rarity * item.Value + 
+					"\nReroll Cost: " + item.Rarity * 50 + "</b></color>";
 				tooltip.transform.GetChild(0).GetComponent<Text>().text = data;
 			} else {
 				if (item.str < 0) {
@@ -152,7 +153,8 @@ public class Tooltip : MonoBehaviour {
 					"\nAtk: " + item.atk + " (" + atkdiff + "</b></color>)" +
 					"\nDef: " + item.def + " (" + defdiff + "</b></color>)" +
 					"\n<color=#e9f004><b>Value: " + item.Value +
-					"\nUpgrade Cost: " + item.Rarity * item.Value + "</b></color>";
+					"\nUpgrade Cost: " + item.Rarity * item.Value + 
+					"\nReroll Cost: " + item.Rarity * 50 + "</b></color>";
 				tooltip.transform.GetChild(0).GetComponent<Text>().text = data;
 			}
 		} else if (item.type == "Armor") {
@@ -208,7 +210,8 @@ public class Tooltip : MonoBehaviour {
 					"\nAtk: " + item.atk + " (" + atkdiff + "</b></color>)" + 
 					"\nDef: " + item.def + " (" + defdiff + "</b></color>)" + 
 					"\n<color=#e9f004><b>Value: " + item.Value +
-					"\nUpgrade Cost: " + item.Rarity * item.Value + "</b></color>";
+					"\nUpgrade Cost: " + item.Rarity * item.Value + 
+					"\nReroll Cost: " + item.Rarity * 50 + "</b></color>";
 				tooltip.transform.GetChild(0).GetComponent<Text>().text = data;
 			} else {
 				if (item.str < 0) {
@@ -261,7 +264,8 @@ public class Tooltip : MonoBehaviour {
 					"\nAtk: " + item.atk + " (" + atkdiff + "</b></color>)" +
 					"\nDef: " + item.def + " (" + defdiff + "</b></color>)" +
 					"\n<color=#e9f004><b>Value: " + item.Value +
-					"\nUpgrade Cost: " + item.Rarity * item.Value + "</b></color>";
+					"\nUpgrade Cost: " + item.Rarity * item.Value + 
+					"\nReroll Cost: " + item.Rarity * 50 + "</b></color>";
 				tooltip.transform.GetChild(0).GetComponent<Text>().text = data;
 			}
 		} else if (item.type == "Sword") {
@@ -317,7 +321,8 @@ public class Tooltip : MonoBehaviour {
 					"\nAtk: " + item.atk + " (" + atkdiff + "</b></color>)" + 
 					"\nDef: " + item.def + " (" + defdiff + "</b></color>)" + 
 					"\n<color=#e9f004><b>Value: " + item.Value +
-					"\nUpgrade Cost: " + item.Rarity * item.Value + "</b></color>";
+					"\nUpgrade Cost: " + item.Rarity * item.Value + 
+					"\nReroll Cost: " + item.Rarity * 50 + "</b></color>";
 				tooltip.transform.GetChild(0).GetComponent<Text>().text = data;
 			} else {
 				if (item.str < 0) {
@@ -370,7 +375,8 @@ public class Tooltip : MonoBehaviour {
 					"\nAtk: " + item.atk + " (" + atkdiff + "</b></color>)" +
 					"\nDef: " + item.def + " (" + defdiff + "</b></color>)" +
 					"\n<color=#e9f004><b>Value: " + item.Value +
-					"\nUpgrade Cost: " + item.Rarity * item.Value + "</b></color>";
+					"\nUpgrade Cost: " + item.Rarity * item.Value + 
+					"\nReroll Cost: " + item.Rarity * 50 + "</b></color>";
 				tooltip.transform.GetChild(0).GetComponent<Text>().text = data;
 			}
 		} else if (item.type == "Spear") {
@@ -426,7 +432,8 @@ public class Tooltip : MonoBehaviour {
 					"\nAtk: " + item.atk + " (" + atkdiff + "</b></color>)" + 
 					"\nDef: " + item.def + " (" + defdiff + "</b></color>)" + 
 					"\n<color=#e9f004><b>Value: " + item.Value +
-					"\nUpgrade Cost: " + item.Rarity * item.Value + "</b></color>";
+					"\nUpgrade Cost: " + item.Rarity * item.Value + 
+					"\nReroll Cost: " + item.Rarity * 50 + "</b></color>";
 				tooltip.transform.GetChild(0).GetComponent<Text>().text = data;
 			} else {
 				if (item.str < 0) {
@@ -479,7 +486,8 @@ public class Tooltip : MonoBehaviour {
 					"\nAtk: " + item.atk + " (" + atkdiff + "</b></color>)" +
 					"\nDef: " + item.def + " (" + defdiff + "</b></color>)" +
 					"\n<color=#e9f004><b>Value: " + item.Value +
-					"\nUpgrade Cost: " + item.Rarity * item.Value + "</b></color>";
+					"\nUpgrade Cost: " + item.Rarity * item.Value + 
+					"\nReroll Cost: " + item.Rarity * 50 + "</b></color>";
 				tooltip.transform.GetChild(0).GetComponent<Text>().text = data;
 			}
 		} else if (item.type == "Axe") {
@@ -535,7 +543,8 @@ public class Tooltip : MonoBehaviour {
 					"\nAtk: " + item.atk + " (" + atkdiff + "</b></color>)" + 
 					"\nDef: " + item.def + " (" + defdiff + "</b></color>)" + 
 					"\n<color=#e9f004><b>Value: " + item.Value +
-					"\nUpgrade Cost: " + item.Rarity * item.Value + "</b></color>";
+					"\nUpgrade Cost: " + item.Rarity * item.Value + 
+					"\nReroll Cost: " + item.Rarity * 50 + "</b></color>";
 				tooltip.transform.GetChild(0).GetComponent<Text>().text = data;
 			} else {
 				if (item.str < 0) {
@@ -588,7 +597,8 @@ public class Tooltip : MonoBehaviour {
 					"\nAtk: " + item.atk + " (" + atkdiff + "</b></color>)" +
 					"\nDef: " + item.def + " (" + defdiff + "</b></color>)" +
 					"\n<color=#e9f004><b>Value: " + item.Value +
-					"\nUpgrade Cost: " + item.Rarity * item.Value + "</b></color>";
+					"\nUpgrade Cost: " + item.Rarity * item.Value + 
+					"\nReroll Cost: " + item.Rarity * 50 + "</b></color>";
 				tooltip.transform.GetChild(0).GetComponent<Text>().text = data;
 			}
 		} else {
@@ -644,7 +654,8 @@ public class Tooltip : MonoBehaviour {
 					"\nAtk: " + item.atk + " (" + atkdiff + "</b></color>)" + 
 					"\nDef: " + item.def + " (" + defdiff + "</b></color>)" + 
 					"\n<color=#e9f004><b>Value: " + item.Value +
-					"\nUpgrade Cost: " + item.Rarity * item.Value + "</b></color>";
+					"\nUpgrade Cost: " + item.Rarity * item.Value + 
+					"\nReroll Cost: " + item.Rarity * 50 + "</b></color>";
 				tooltip.transform.GetChild(0).GetComponent<Text>().text = data;
 			} else {
 				if (item.str < 0) {
@@ -697,7 +708,8 @@ public class Tooltip : MonoBehaviour {
 					"\nAtk: " + item.atk + " (" + atkdiff + "</b></color>)" +
 					"\nDef: " + item.def + " (" + defdiff + "</b></color>)" +
 					"\n<color=#e9f004><b>Value: " + item.Value +
-					"\nUpgrade Cost: " + item.Rarity * item.Value + "</b></color>";
+					"\nUpgrade Cost: " + item.Rarity * item.Value + 
+					"\nReroll Cost: " + item.Rarity * 50 + "</b></color>";
 				tooltip.transform.GetChild(0).GetComponent<Text>().text = data;
 			}
 		}

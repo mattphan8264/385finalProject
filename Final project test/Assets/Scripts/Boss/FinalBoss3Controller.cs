@@ -40,6 +40,9 @@ public class FinalBoss3Controller : MonoBehaviour {
 	public float sideShot;
 	public float targetShoot;
 
+	float timedown = 3f;
+	float shot1Timer = 2f;
+
 	void Awake() {
 		target = GameObject.FindWithTag ("Player").transform;
 		anim = GetComponent<Animator> ();
@@ -59,6 +62,11 @@ public class FinalBoss3Controller : MonoBehaviour {
 			increaseDamage = Time.time;
 		}
 
+		if (myHealth.currentHealth < myHealth.maxHealth / 2) {
+			timedown = 2f;
+			shot1Timer = 1.5f;
+		}
+
 		playerX = target.transform.position.x;
 		enemyX = transform.position.x;
 		playerY = target.transform.position.y;
@@ -69,7 +77,7 @@ public class FinalBoss3Controller : MonoBehaviour {
 			if (transform.position.y > down && !stayDropped && goDown) {
 				transform.position += Vector3.down * 1f * Time.deltaTime;
 				stayDown = Time.time;
-			} else if (Time.time - stayDown < 3f) {
+			} else if (Time.time - stayDown < timedown) {
 				if (stayDropped == false) {
 					stayDropped = true;
 				}
@@ -102,12 +110,12 @@ public class FinalBoss3Controller : MonoBehaviour {
 			}
 		}
 
-		if (Time.time - sideShot > 2f) {
+		if (Time.time - sideShot > shot1Timer) {
 			sideFire ();
 			sideShot = Time.time;
 		}
 
-		if (Time.time - targetShoot > 2f) {
+		if (Time.time - targetShoot > shot1Timer) {
 			targetShot ();
 			targetShoot = Time.time;
 		}
@@ -117,7 +125,7 @@ public class FinalBoss3Controller : MonoBehaviour {
 		float divider = Mathf.Sqrt (Mathf.Pow (playerX - enemyX, 2) + Mathf.Pow (playerY - enemyY , 2));
 		BulletController shot = bullet3.GetComponent<BulletController>();
 		shot.setVelocity ((playerX - enemyX) / divider, (playerY - enemyY) / divider);
-		shot.damage = damage;
+		shot.damage = damage + (int)(PlayerStatistics.maxHealth / 100f);
 		bulletPos = new Vector2 (enemyX, enemyY);
 		Instantiate (bullet3, bulletPos, Quaternion.identity);
 	}
@@ -125,13 +133,13 @@ public class FinalBoss3Controller : MonoBehaviour {
 	void sideFire() {
 		BulletController shot = bullet2.GetComponent<BulletController>();
 		shot.setVelocity (3, 0);
-		shot.damage = damage;
+		shot.damage = damage + (int)(PlayerStatistics.maxHealth / 100f);
 		bulletPos = new Vector2 (left, playerY);
 		Instantiate (bullet2, bulletPos, Quaternion.identity);
 
 		BulletController shot2 = bullet2.GetComponent<BulletController>();
 		shot2.setVelocity (-3, 0);
-		shot2.damage = damage;
+		shot2.damage = damage + (int)(PlayerStatistics.maxHealth / 100f);
 		bulletPos = new Vector2 (right, playerY);
 		Instantiate (bullet2, bulletPos, Quaternion.identity);
 	}
@@ -142,13 +150,15 @@ public class FinalBoss3Controller : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.CompareTag ("Player")) {
-			PlayerStatistics.takeDamage(damage);
+			PlayerStatistics.takeDamage((damage / 2) + (PlayerStatistics.health / 100f));
+			PlayerStatistics.takeDefDamage((damage / 2) + (PlayerStatistics.health / 100f));
 		}
 	}
 
 	void OnTriggerStay2D(Collider2D other) {
 		if (other.gameObject.CompareTag ("Player")) {
-			PlayerStatistics.takeDamage(damage);
+			PlayerStatistics.takeDamage((damage / 2) + (PlayerStatistics.health / 100f));
+			PlayerStatistics.takeDefDamage((damage / 2) + (PlayerStatistics.health / 100f));
 		}
 	}
 }

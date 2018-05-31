@@ -1,13 +1,9 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Cooldowns.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Menu\MainMenuController.cs">
     <Files>
-      <File FileName="Assets\Scripts\Enemies\BulletController.cs" Line="80" Column="14" />
-      <File FileName="Assets\Scripts\Boss\BossHealth.cs" Line="77" Column="5" />
-      <File FileName="Assets\Scripts\Player\PlayerStatistics.cs" Line="146" Column="19" />
-      <File FileName="Assets\Scripts\Player\Spells\HealingController.cs" Line="15" Column="11" />
-      <File FileName="Assets\Cooldowns.cs" Line="28" Column="17" />
-      <File FileName="Assets\PotionCooldown.cs" Line="19" Column="26" />
+      <File FileName="Assets\Scripts\Menu\MainMenuController.cs" Line="73" Column="45" />
+      <File FileName="Assets\Scripts\Stage\PortalController.cs" Line="89" Column="27" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

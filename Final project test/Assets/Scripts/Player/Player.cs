@@ -180,11 +180,13 @@ public class Player : MonoBehaviour {
 			loadTime = Time.time;
 			setLoadTime = true;
 		}
-		if (loadedChar && Time.time - loadTime > 1) {
+		if (loadedChar && Time.time - loadTime > 3f) {
 			LoadPlayer load = new LoadPlayer ();
 			load.Load (this);
 			loadedChar = false;
 			spells.load ();
+			PlayerStatistics temp = GetComponent<PlayerStatistics> ();
+			temp.text.updateLevel ();
 			Destroy (loadingScreen);
 		}
 

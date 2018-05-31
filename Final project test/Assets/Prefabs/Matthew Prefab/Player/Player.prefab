@@ -62,6 +62,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1046912892310124
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 224571470387047718}
+  - component: {fileID: 222237146192200176}
+  - component: {fileID: 114538289256078200}
+  m_Layer: 5
+  m_Name: Upgrade
+  m_TagString: Inventory
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1056884579498802
 GameObject:
   m_ObjectHideFlags: 1
@@ -1566,7 +1583,7 @@ GameObject:
   - component: {fileID: 222457713772422570}
   - component: {fileID: 114150737090319134}
   m_Layer: 5
-  m_Name: Upgrade
+  m_Name: Reroll
   m_TagString: Inventory
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3950,7 +3967,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: eaa50874fc96e0a49972b4b2dea22340, type: 3}
+  m_Sprite: {fileID: 21300000, guid: eb86404ae7f342943aeb6f54c0e79afd, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4486,8 +4503,10 @@ MonoBehaviour:
   controls: 0
   saveOpen: 0
   upgrading: 0
+  rerolling: 0
   player: {fileID: 0}
-  upgradeImage: {fileID: 114150737090319134}
+  upgradeImage: {fileID: 114538289256078200}
+  rerollImage: {fileID: 114150737090319134}
 --- !u!114 &114274444868841824
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5843,6 +5862,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+--- !u!114 &114538289256078200
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1046912892310124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: eaa50874fc96e0a49972b4b2dea22340, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
 --- !u!114 &114544556293650272
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6349,11 +6395,11 @@ MonoBehaviour:
 
     Press R when you''re dead to return to town
 
+    Scroll up or down to switch weapons
+
     Press left mouse button to attack
 
     Press middle mouse button to switch weapons
-
-    Scroll up or down to switch weapons
 
     Press right mouse button to use a spell
 
@@ -6363,7 +6409,13 @@ MonoBehaviour:
 
     Press F next to a shop keeper to use the shop
 
-    Press escape to open menu'
+    Press escape to open menu
+
+    Press U in inventory to activate upgrading mode
+
+    Press Y in inventory to activate rerolling mode
+
+    Press S at a save point to save'
 --- !u!114 &114658659372743064
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9125,6 +9177,12 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1214102167475118}
+--- !u!222 &222237146192200176
+CanvasRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1046912892310124}
 --- !u!222 &222242590766968262
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -9989,6 +10047,7 @@ RectTransform:
   - {fileID: 224584117525846198}
   - {fileID: 224891450786122470}
   - {fileID: 224623159906507766}
+  - {fileID: 224571470387047718}
   - {fileID: 224851081257125500}
   m_Father: {fileID: 4340119248068926}
   m_RootOrder: 7
@@ -10032,7 +10091,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -151.6, y: 177}
+  m_AnchoredPosition: {x: -151.6, y: 203.2}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224138585077436162
@@ -10809,6 +10868,24 @@ RectTransform:
   m_AnchoredPosition: {x: -109, y: 147}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!224 &224571470387047718
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1046912892310124}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 0}
+  m_Children: []
+  m_Father: {fileID: 224095075319436100}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -347.7, y: 209.1}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224579473134545138
 RectTransform:
   m_ObjectHideFlags: 1
@@ -11558,11 +11635,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
   m_Father: {fileID: 224095075319436100}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -347.7, y: 209.1}
+  m_AnchoredPosition: {x: -347.7, y: 108}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224862077472552766
@@ -11805,7 +11882,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 500, y: 400}
+  m_SizeDelta: {x: 500, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224960725783423938
 RectTransform:

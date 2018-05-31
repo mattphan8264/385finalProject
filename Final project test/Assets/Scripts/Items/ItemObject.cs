@@ -102,6 +102,17 @@ public class ItemObject : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
 						tooltip.Activate (inv.slots [slot].GetComponent<Slot> ().item.GetComponent<ItemStats> ());
 					}
 				}
+				if (question.rerolling) {
+					if (!equipped) {
+						ItemStats temp = inv.slots [slot].GetComponent<Slot> ().item.GetComponent<ItemStats> ();
+						if (PlayerStatistics.coins >= temp.Rarity * 50) {
+							PlayerStatistics.coins -= temp.Rarity * 50;
+							int rerollID = inv.slots [slot].GetComponent<Slot> ().item.GetComponent<ItemStats> ().ID;
+							inv.RemoveItemSlot (slot);
+							inv.pickUpItem (rerollID);
+						}
+					}
+				}
 			}
 			if (eventData.button == PointerEventData.InputButton.Right) {
 				GameObject delete = GameObject.Find ("Delete");

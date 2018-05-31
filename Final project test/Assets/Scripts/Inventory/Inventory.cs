@@ -74,10 +74,10 @@ public class Inventory : MonoBehaviour
 				temp.item = Instantiate (inventoryItem);
 				temp.item.transform.SetParent (slots [i].transform);
 				temp.item.transform.position = slots [i].transform.position;
-				temp.item.GetComponent<Image> ().sprite = database.RerollFetch (id).Sprite;
+				temp.item.GetComponent<Image> ().sprite = database.FetchItemByID (id).Sprite;
 				temp.item.transform.localScale = new Vector3 (.5f, .5f, 0);
 				temp.item.GetComponent<ItemObject> ().slot = i;
-				temp.item.GetComponent<ItemStats> ().loadStats(database.FetchItemByID(id));
+				temp.item.GetComponent<ItemStats> ().loadStats(database.RerollFetch(id));
 				break;
 			}
 		}

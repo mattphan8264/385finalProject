@@ -67,35 +67,47 @@ public class ItemDatabase : MonoBehaviour
     }
 
 	Item rerollStats(Item input) {
-		if (PlayerStatistics.level <= 5) {
-			int random = Random.Range (-5, 6);
-			input.str += random;
-			random = Random.Range (-5, 6);
-			input.dex += random;
-			random = Random.Range (-5, 6);
-			input.wis += random;
-			random = Random.Range (-5, 6);
-			input.luk += random;
-			random = Random.Range (-5, 6);
-			input.atk += random;
-			random = Random.Range (-5, 6);
-			input.def += random;
-		} else {
-			int random = Random.Range (-5, (int)PlayerStatistics.level + 1);
-			input.str += random;
-			random = Random.Range (-5, (int)PlayerStatistics.level + 1);
-			input.dex += random;
-			random = Random.Range (-5, (int)PlayerStatistics.level + 1);
-			input.wis += random;
-			random = Random.Range (-5, (int)PlayerStatistics.level + 1);
-			input.luk += random;
-			random = Random.Range (-5, (int)PlayerStatistics.level + 1);
-			input.atk += random;
-			random = Random.Range (-5, (int)PlayerStatistics.level + 1);
-			input.def += random;
+		Item temp = new Item (input.ID, input.Title, input.type, input.Value, input.str, input.dex, input.wis, input.luk, input.atk, input.def, input.Description, input.Rarity, input.Slug);
+
+		int boosted = Random.Range (0, 100);
+		if (boosted < 5) {
+			temp.str += (int)temp.str / 2;
+			temp.dex += (int)temp.dex / 2;
+			temp.wis += (int)temp.wis / 2;
+			temp.luk += (int)temp.luk / 2;
+			temp.atk += (int)temp.atk / 4;
+			temp.def += (int)temp.def / 4;
+			temp.Title = temp.Title + " (Boosted)";
 		}
 
-		return input;
+		if (PlayerStatistics.level <= 3) {
+			int random = Random.Range (-3, 4);
+			temp.str += random;
+			random = Random.Range (-3, 4);
+			temp.dex += random;
+			random = Random.Range (-3, 4);
+			temp.wis += random;
+			random = Random.Range (-3, 4);
+			temp.luk += random;
+			random = Random.Range (-3, 4);
+			temp.atk += random;
+			random = Random.Range (-3, 4);
+			temp.def += random;
+		} else {
+			int random = Random.Range (-3, (int)(temp.str / 5) + ((int)PlayerStatistics.level / 5) + 1);
+			temp.str += random;
+			random = Random.Range (-3, (int)(temp.dex / 5) + ((int)PlayerStatistics.level / 5) + 1);
+			temp.dex += random;
+			random = Random.Range (-3, (int)(temp.wis / 5) + ((int)PlayerStatistics.level / 5) + 1);
+			temp.wis += random;
+			random = Random.Range (-3, (int)(temp.luk / 5) + ((int)PlayerStatistics.level / 5) + 1);
+			temp.luk += random;
+			random = Random.Range (-3, (int)(temp.atk / 5) + ((int)PlayerStatistics.level / 5) + 1);
+			temp.atk += random;
+			random = Random.Range (-3, (int)(temp.def / 5) + ((int)PlayerStatistics.level / 5) + 1);
+			temp.def += random;
+		}
+		return temp;
 	}
 
 }

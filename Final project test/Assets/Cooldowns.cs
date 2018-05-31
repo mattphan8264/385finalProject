@@ -19,12 +19,12 @@ public class Cooldowns : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		float healthtime = (1 - (Time.time - PlayerStatistics.healthPotTimer) / 3);
-		float manatime = (1 - (Time.time - PlayerStatistics.manaPotTimer) / 3);
-		if (healthtime < 0) {
+		float healthtime = Time.time - PlayerStatistics.healthPotTimer;
+		float manatime = Time.time - PlayerStatistics.manaPotTimer;
+		if (healthtime < 0 || healthtime > 3f) {
 			healthtime = 0;
 		}
-		if (manatime < 0) {
+		if (manatime < 0 || manatime > 3f) {
 			manatime = 0;
 		}
 		health.text = "Health Potion cooldown: " + (int)healthtime;

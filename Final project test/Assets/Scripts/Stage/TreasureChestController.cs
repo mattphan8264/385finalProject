@@ -38,6 +38,7 @@ public class TreasureChestController : MonoBehaviour {
 						Quaternion.identity);
 				}
 				opened = true;
+				control.text = "";
 			}
 		}
 	}
@@ -60,7 +61,9 @@ public class TreasureChestController : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.CompareTag ("Player")) {
 			near = true;
-			control.text = "F";
+			if (!opened) {
+				control.text = "F";
+			}
 		}
 	}
 

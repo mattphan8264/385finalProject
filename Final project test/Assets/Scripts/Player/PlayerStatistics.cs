@@ -259,9 +259,6 @@ public class PlayerStatistics  : MonoBehaviour
 				manaRegen = Time.time;
 			}
 		}
-		if (!updateTextIcon) {
-			text.updateLevel ();
-		}
 		//
 		maxHealth = baseHealth + (3 * str);
 		if (maxHealth <= 1) {

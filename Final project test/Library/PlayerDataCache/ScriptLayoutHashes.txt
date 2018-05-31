@@ -36,6 +36,7 @@ Assets/Stages/TutorialStages/Tutorial6.unity
 Assets/Stages/TutorialStages/Tutorial7.unity
 Assets/Stages/TutorialStages/Tutorial8.unity
 Assets/Stages/TutorialStages/Tutorial9.unity
+Assets/Stages/TutorialStages/Tutorial12.unity
 Assets/Stages/TutorialStages/Tutorial10.unity
 Assets/Stages/TutorialStages/Tutorial11.unity
 SceneListEnd?
@@ -53,7 +54,7 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 31aaf521b3ef8699466676591ea0efd4 UnityEngine.Timeline.dll:UnityEngine.Timeline.GroupTrack
 31aaf521b3ef8699466676591ea0efd4 UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 df374c01140c2d578bf70cbd60073d1d UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
-9b799a31c8cf824078977ab2d64d3fef Assembly-CSharp.dll:.MainMenuController
+df8b9b52e00e86f206159255dc7206b1 Assembly-CSharp.dll:.MainMenuController
 492db5ae4fd998f0212061c83ff0ee74 Assembly-CSharp.dll:.ShopStage
 12b95c8f2b54918ab14825a44eeb4bd5 Assembly-CSharp.dll:.NextTooltip
 c297f9af6d4faa61d21637f5c49a1fa2 Assembly-CSharp.dll:.GEnemyWep
@@ -172,7 +173,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 8ff19df1f4155101cbc59c9b36318343 Assembly-CSharp.dll:.Tooltip
 7061fb870d883fdfc9fac27d48aa9065 Assembly-CSharp.dll:.JumpThrough
 74fa7834c0d6411276eb68adc118628a Assembly-CSharp.dll:.coinController
-256a1141f7805a5789014849c064cf53 Assembly-CSharp.dll:.FinalBoss2Controller
+e3e925790949e18b5d5c92ebe8769d9a Assembly-CSharp.dll:.FinalBoss2Controller
 20a8aae521191c15fc13491ace0fc1aa Assembly-CSharp.dll:.PotionInventory
 02fa3f8c8f2173930fd67b3021aa1ccc Assembly-CSharp.dll:.RareItemController
 dc42b00dc04fd541388728f3ea717c98 Assembly-CSharp.dll:.PotionSlot
@@ -195,6 +196,7 @@ d64a7f935a1332310951c3185b31bd6b Assembly-CSharp.dll:.DoorController
 833990591e6df2138feb7ad7dc010cc2 Assembly-CSharp.dll:.PotionCooldown
 aa2e7797e2822bdedff620e81d324838 Assembly-CSharp.dll:.CrusherBoss
 4d52fd7a07270a80d14d2a1963a229e0 Assembly-CSharp.dll:.PisanShopKeeper
+05b1eb4713c9439051aaa5cbee1ccb37 Assembly-CSharp.dll:.Cooldowns
 89c1990330271e9ae41ed0c7a914ee48 Assembly-CSharp.dll:.PlayerMusic
 6325068068b7444039497b3406f6fcc4 Assembly-CSharp.dll:.BossHealth
 492db5ae4fd998f0212061c83ff0ee74 Assembly-CSharp.dll:.TownController
@@ -233,7 +235,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ItemDatabase
 457c8520ce48157305453addda831fd7 Assembly-CSharp.dll:.ShopTooltip
 1c5da2da833dafea228720490bca5fcd Assembly-CSharp.dll:.PotionObject
-aad0969ad0e121b2377dd630a83db1b8 Assembly-CSharp.dll:.CanvasController
+d9d9921ad4c07b464d758fbf730c1815 Assembly-CSharp.dll:.CanvasController
 0a8d98f208f5663ac73f757bc180c631 Assembly-CSharp.dll:.PlayerSpawnLocation
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.QuitOnClick
 f39111988ceb368d6e39330aadccfa87 Assembly-CSharp.dll:.DaggerController
@@ -278,4 +280,3 @@ f4dc4786aa07b8ab2c854a2c4fe97ebb Assembly-CSharp.dll:.ItemPickupController
 ce9cd4b8d999269aba58dbfe044b2b24 Assembly-CSharp.dll:.statDescription
 feca42a4c086c0535d9455c4acf1ea09 Assembly-CSharp.dll:.SpellBookController
 05b3c4ca0ba03e320f49c1244a0e6f4b Assembly-CSharp.dll:.MushroomController
-05b1eb4713c9439051aaa5cbee1ccb37 Assembly-CSharp.dll:.Cooldowns

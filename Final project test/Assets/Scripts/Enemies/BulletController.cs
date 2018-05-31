@@ -58,9 +58,15 @@ public class BulletController : MonoBehaviour {
 			Invoke ("sendShot", 3f);
 			activate = true;
 		}
+
+		if (!delayShot) {
+			transform.rotation = Quaternion.LookRotation (Vector3.forward, target.position - transform.position);
+		}
 	}
 
 	public void sendShot() {
+		float divider = Mathf.Sqrt (Mathf.Pow (target.position.x - transform.position.x, 2) + Mathf.Pow (target.position.y -  transform.position.y , 2));
+		setVelocity((target.position.x - transform.position.x) / divider, (target.position.y -  transform.position.y) / divider);
 		delayShot = true;
 	}
 

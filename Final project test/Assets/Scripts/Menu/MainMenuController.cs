@@ -5,8 +5,10 @@ using UnityEngine;
 public class MainMenuController : MonoBehaviour {
 	GameObject[] instructions;
 	GameObject[] control;
+	GameObject[] credit;
 	public bool show = false;
 	public bool controls = false;
+	public bool credits = false;
 
 	// Use this for initialization
 	void Start () {
@@ -18,6 +20,11 @@ public class MainMenuController : MonoBehaviour {
 		control = GameObject.FindGameObjectsWithTag ("Controls");
 		foreach (GameObject controlObject in control) {
 			controlObject.SetActive (false);
+		}
+
+		credit = GameObject.FindGameObjectsWithTag ("Credits");
+		foreach (GameObject creditObject in credit) {
+			creditObject.SetActive (false);
 		}
 	}
 	
@@ -51,6 +58,20 @@ public class MainMenuController : MonoBehaviour {
 		controls = false;
 		foreach (GameObject controlObject in control) {
 			controlObject.SetActive (false);
+		}
+	}
+
+	public void showCredits() {
+		credits = true;
+		foreach (GameObject creditObject in credit) {
+			creditObject.SetActive (true);
+		}
+	}
+
+	public void hideCredits() {
+		credits = false;
+		foreach (GameObject creditObject in credit) {
+			creditObject.SetActive (false);
 		}
 	}
 }

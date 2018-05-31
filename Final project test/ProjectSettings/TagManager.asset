@@ -26,6 +26,7 @@ TagManager:
   - SaveQuestion
   - Anvil
   - playeroutofbounds
+  - Credits
   layers:
   - Default
   - TransparentFX

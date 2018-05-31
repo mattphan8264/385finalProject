@@ -19,9 +19,11 @@ public class CanvasController : MonoBehaviour {
 	public bool saveOpen = false;
 
 	public bool upgrading = false;
+	public bool rerolling = false;
 
 	public Player player;
 	public Image upgradeImage;
+	public Image rerollImage;
 
 	void Start () {
 		
@@ -71,23 +73,36 @@ public class CanvasController : MonoBehaviour {
 						if (!player.tryingToDelete) {
 							hideInventory ();
 							upgrading = false;
+							rerolling = false;
 							upgradeImage.sprite = Resources.Load<Sprite> ("DrawingsV2/UI/UpgradeUnActive");
+							rerollImage.sprite = Resources.Load<Sprite> ("DrawingsV2/UI/RerollUnActive");
 						}
 					} else {
 						hideInventory ();
 						upgrading = false;
+						rerolling = false;
 						upgradeImage.sprite = Resources.Load<Sprite> ("DrawingsV2/UI/UpgradeUnActive");
+						rerollImage.sprite = Resources.Load<Sprite> ("DrawingsV2/UI/RerollUnActive");
 					}
 				}
 			}
 
-			if (Input.GetKeyDown (KeyCode.U) && player.upgradeAvailable) {
+			if (Input.GetKeyDown (KeyCode.U) && player.upgradeAvailable && !rerolling) {
 				if (!upgrading && inventoryOpen) {
 					upgrading = true;
 					upgradeImage.sprite = Resources.Load<Sprite> ("DrawingsV2/UI/UpgradeActive");
 				} else if (upgrading && inventoryOpen) {
 					upgrading = false;
 					upgradeImage.sprite = Resources.Load<Sprite> ("DrawingsV2/UI/UpgradeUnActive");
+				}
+			}
+			if (Input.GetKeyDown (KeyCode.Y) && player.upgradeAvailable && !upgrading) {
+				if (!rerolling && inventoryOpen) {
+					rerolling = true;
+					rerollImage.sprite = Resources.Load<Sprite> ("DrawingsV2/UI/RerollActive");
+				} else if (rerolling && inventoryOpen) {
+					rerolling = false;
+					rerollImage.sprite = Resources.Load<Sprite> ("DrawingsV2/UI/RerollUnActive");
 				}
 			}
 		}

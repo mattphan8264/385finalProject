@@ -9,6 +9,7 @@ public class EnemyManager : MonoBehaviour {
 	public Vector2 size;
 	public Vector2 boxPosition;
 
+	int count = 0;
 	int maxAmount;
 
 	float spawnx;
@@ -39,7 +40,7 @@ public class EnemyManager : MonoBehaviour {
 	}
 
 	void Spawn() {
-		if (GameObject.FindGameObjectsWithTag("Enemy").Length >= maxAmount) {
+		if (GameObject.FindGameObjectsWithTag("Enemy").Length >= maxAmount || count >= 16) {
 			return;
 		}
 		spawnx = Random.Range (boxPosition.x - (size.x / 2), boxPosition.y + (size.x / 2));
@@ -47,5 +48,6 @@ public class EnemyManager : MonoBehaviour {
 		Vector3 position = new Vector3 (spawnx, spawny, 0);
 		int selectEnemy = Random.Range (0, EnemyList.numberEnemies);
 		Instantiate (EnemyList.enemyList[selectEnemy],position, Quaternion.identity);
+		count++;
 	}
 }
